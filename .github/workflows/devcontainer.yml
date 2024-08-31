@@ -42,5 +42,4 @@ jobs:
         with:
           imageName: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           cacheFrom: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          imageTag: ${{ steps.meta.outputs.tags }}
           push: always
