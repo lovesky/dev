@@ -2,7 +2,8 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
     "features": {
         "ghcr.io/devcontainers/features/node:1": {
-            "version": "20"
+            "version": "20",
+            "nvmVersion": "0.39.7"
         },
         "ghcr.io/devcontainers/features/php:1": {
             "version": "8.3.10",
@@ -17,7 +18,19 @@
         "ghcr.io/devcontainers/features/rust:1": {},
         "./local-features/bun": "latest",
         "./local-features/protoc": "latest",
-        "./local-features/zig": "latest"
+        "./local-features/zig": "latest",
+        "./local-features/mirror": "latest"
     },
+    "overrideFeatureInstallOrder": [
+        "ghcr.io/devcontainers/features/node",
+        "ghcr.io/devcontainers/features/python",
+        "ghcr.io/devcontainers/features/php",
+        "ghcr.io/devcontainers/features/go",
+        "ghcr.io/devcontainers/features/rust",
+        "./local-features/bun",
+        "./local-features/protoc",
+        "./local-features/zig",
+        "./local-features/mirror"
+    ],
     "customizations": {}
 }
